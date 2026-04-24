@@ -1,0 +1,30 @@
+{
+  "questions": [
+    {
+      "label": "question_comprehensive_understanding",
+      "question": "AとBで共通して述べられていることは何か。",
+      "answers": [
+        "語学学習には、必ず教室に通うことが必要である。",
+        "独学とは、安価だが誰にでも向いている方法である。",
+        "語学学習の方法には、それぞれ適した場面や限界がある。",
+        "会話力を伸ばすには、アプリだけで十分である。"
+      ],
+      "correct": 3,
+      "explain_vn": "A nói độc học hiệu quả cho trình độ cơ bản đến trung cấp; B nói độc học có giới hạn, nhất là khả năng giao tiếp và người đã ở trình độ trung cấp. Cả hai cùng thừa nhận mỗi phương pháp có phạm vi phù hợp riêng.",
+      "explain_en": "A says self-study is effective up to intermediate; B says self-study has limits, especially for conversation and post-intermediate learners. Both acknowledge each method suits certain contexts/limits."
+    },
+    {
+      "label": "question_comprehensive_understanding",
+      "question": "語学学習の方法について、AとBはどのように述べているか。",
+      "answers": [
+        "AもBも、独学だけで十分にどのレベルにも到達できると述べている。",
+        "Aはアプリによる独学の効率と経済性を評価し、Bは対面教室の利点を重視している。",
+        "AもBも、教室通いこそが唯一の正しい方法だと述べている。",
+        "Aは初心者には教室を勧め、Bは中級者には独学を勧めている。"
+      ],
+      "correct": 2,
+      "explain_vn": "A khẳng định ứng dụng/độc học rất hiệu quả và tiết kiệm cho tới mức trung cấp; B nhấn mạnh môi trường lớp học, giáo viên, và bạn đồng học — đặc biệt cho những ai đã trung cấp và muốn vượt qua. 2 lập trường rõ ràng đối lập.",
+      "explain_en": "A backs app/self-study as efficient and cheap up to intermediate; B emphasizes the classroom's teacher, peers, and feedback — especially for those past intermediate who want to break through. Two clearly opposing stances."
+    }
+  ]
+}

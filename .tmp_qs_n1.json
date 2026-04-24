@@ -1,0 +1,30 @@
+{
+  "questions": [
+    {
+      "label": "question_comprehensive_understanding",
+      "question": "AとBで共通して述べられているのはどれか。",
+      "answers": [
+        "現段階のAIは、新しい状況においても人間を凌駕する判断力を持っている。",
+        "現段階のAIは、人間の直感や創造性を完全には再現できない。",
+        "AIの進歩は一時的な流行に過ぎず、いずれ停滞する可能性が高い。",
+        "人間の知性は脳の無意識的計算に過ぎず、特別なものではない。"
+      ],
+      "correct": 2,
+      "explain_vn": "Cả A và B đều thừa nhận rằng AI hiện tại chưa thể mô phỏng hoàn toàn trực giác/sáng tạo của con người. A coi đây là ranh giới bản chất, B coi đây là vấn đề kỹ thuật tạm thời — nhưng cả hai đều cùng nhận định thực tế hiện tại.",
+      "explain_en": "Both A and B acknowledge that current AI cannot fully replicate human intuition/creativity. A treats it as an essential limit; B treats it as a temporary technical gap — but both agree on the present factual state."
+    },
+    {
+      "label": "question_comprehensive_understanding",
+      "question": "人間の直感について、AとBはどのように述べているか。",
+      "answers": [
+        "Aは直感を知性の本質と見なし、Bは直感も計算の結果であり機械でも再現可能と見なしている。",
+        "AもBも、直感は人間固有の神聖な能力であり機械には再現できないと主張している。",
+        "Aは直感は訓練で獲得するものと考え、Bは生まれつきのものと考えている。",
+        "Aは直感を不要と切り捨てるが、Bは直感こそがAIの限界を決めると強調している。"
+      ],
+      "correct": 1,
+      "explain_vn": "A định nghĩa trực giác là \"bản chất của tri tuệ\" (知性の本質にほかならない) — cái không thể thay thế. B lập luận trực giác chỉ là \"kết quả của phép tính vô thức khổng lồ trong não\" (脳内での膨大な無意識的計算の結果) mà với đủ năng lực tính toán, máy cũng có thể tái tạo.",
+      "explain_en": "A defines intuition as the 'essence of intelligence' — irreducible. B argues intuition is merely 'the result of massive unconscious brain computation' and thus reproducible by machines given enough compute."
+    }
+  ]
+}
