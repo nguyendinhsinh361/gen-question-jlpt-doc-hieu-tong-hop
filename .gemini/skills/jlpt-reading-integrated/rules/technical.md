@@ -203,7 +203,7 @@ Skip `<rt>`, `<style>`, `<script>`. Remove whitespace: space, tab, newline, full
 |--------|-------|
 | `_id` | `{LEVEL}_{uuid32hex}` — unique |
 | `level` | `N1` hoặc `N2` (chỉ 2 level) |
-| `tag` | Topic tiếng Việt (`AI và đời sống`, `giáo dục trẻ em`, ...) |
+| `tag` | Topic **tiếng Anh** từ cột `en` của `rules/topic.json` (VD `artificial intelligence`, `education`, `lifestyle`) |
 | `jp_char_count` | Result `count_body_chars()` (tổng A + B) |
 | `kind` | Always `đọc hiểu tổng hợp` |
 | `general_audio` | **""** (không audio) |

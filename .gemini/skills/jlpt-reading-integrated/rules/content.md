@@ -32,18 +32,21 @@ Kiểu quan hệ A ↔ B (chọn 1):
 
 ### R1.3 Topic Catalog (cho A và B)
 
-Topic tiếng Việt (dùng trong column `tag`):
+Tag PHẢI bằng **tiếng Anh** — chọn từ cột `en` của `rules/topic.json` (catalog 287 topics, 13 category). Tham khảo `rules/rule_doc_hieu.md` (rule chung của giáo viên cho TOÀN BỘ phần đọc hiểu) để chọn topic phù hợp level. Category gợi ý cho dạng tổng hợp:
 
-| Nhóm | Topic labels | Level phù hợp |
-|------|--------------|---------------|
-| Văn hóa đời sống | `lối sống hiện đại`, `thế hệ trẻ`, `gia đình`, `văn hóa ăn uống`, `giải trí`, `du lịch` | N1, N2 |
-| Công nghệ / AI | `AI và đời sống`, `công nghệ số`, `mạng xã hội`, `làm việc từ xa`, `smartphone` | N1, N2 |
-| Giáo dục | `giáo dục trẻ em`, `cải cách giáo dục`, `phương pháp học`, `tiếng Anh vs tiếng Nhật` | N1, N2 |
-| Môi trường / sức khỏe | `môi trường`, `ăn chay`, `tập thể dục`, `stress`, `giấc ngủ` | N2 (phổ biến) |
-| Kinh tế / lao động | `khởi nghiệp`, `cân bằng công việc`, `tiền lương`, `mua nhà hay thuê` | N1, N2 |
-| Tư vấn / quan hệ | `tư vấn tình yêu`, `tư vấn nghề nghiệp`, `相談者`, `ứng xử gia đình` | N2 (advice format) |
-| Xã hội / phê bình | `già hóa dân số`, `bình đẳng giới`, `đa văn hóa`, `cộng đồng địa phương` | N1 (phổ biến) |
-| Triết học / ngôn ngữ | `bản chất con người`, `ý nghĩa cuộc sống`, `記憶とノスタルジー`, `ngôn ngữ và xã hội` | N1 |
+| Nhóm | Topic labels (en) | Level phù hợp |
+|------|-------------------|---------------|
+| Daily Life & Culture | `lifestyle`, `youth`, `family`, `food culture`, `entertainment`, `travel` | N1, N2 |
+| Technology / AI | `artificial intelligence`, `digital society`, `social media`, `remote work`, `smartphone` | N1, N2 |
+| Education | `education`, `educational reform`, `learning`, `language` | N1, N2 |
+| Environment / Health | `environment`, `vegetarianism`, `exercise`, `stress`, `sleep` | N2 (phổ biến) |
+| Economy / Work | `entrepreneurship`, `work-life balance`, `salary`, `housing` | N1, N2 |
+| Advice / Relationships | `relationships`, `career advice`, `family relationships`, `parenting` | N2 (advice format) |
+| Society / Criticism | `aging society`, `gender equality`, `multiculturalism`, `community` | N1 (phổ biến) |
+| Philosophy / Language | `human nature`, `purpose`, `memory`, `language and society` | N1 |
+
+> **⚠️ KHÔNG dùng tag tiếng Việt hoặc tiếng Nhật. TUYỆT ĐỐI tiếng Anh.**
+> Phải dùng tiếng Anh slug đúng cột `en` của `rules/topic.json` (✅ `artificial intelligence`, `lifestyle`, `aging society`).
 
 Batch ≥ 3 bài: chọn topic từ ≥ 2 nhóm khác nhau.
 

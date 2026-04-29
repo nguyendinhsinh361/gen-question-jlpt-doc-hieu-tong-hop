@@ -87,6 +87,19 @@ Distractor **không được copy nguyên đoạn từ bài**:
 
 Quá giới hạn → distractor quá dễ hoặc đáp án đúng bị lộ vì copy.
 
+### R5.8 Văn phong câu hỏi (thể động từ) theo level — BẮT BUỘC
+
+Câu hỏi (`question_X`) và 4 lựa chọn (`answer_X`) phải dùng đúng **thể động từ** theo level:
+
+| Level | Thể bắt buộc | Đặc trưng kết câu |
+|-------|--------------|-------------------|
+| **N1, N2, N3** | **Thể thường** (普通体 / だ・である調) | `〜か。` / `〜のはどれか。` / `〜と考えられるか。` (KHÔNG dùng です/ます) |
+| **N4, N5** | **Thể ます** (です・ます調) | `〜ですか。` / `〜のはどれですか。` / `〜と思いますか。` |
+
+**Quy tắc cứng:**
+- Đọc hiểu tổng hợp CHỈ có **N1 và N2** → cả 2 level đều dùng **thể thường**, KHÔNG được dùng です/ます (kể cả các pattern Q2 compare như `AとBで共通して述べられているのはどれか。`, `XについてAとBはどのように述べているか。`)
+- Câu hỏi và **cả 4 đáp án** phải nhất quán cùng thể (không trộn lẫn)
+
 ---
 
 ## R6. Định dạng câu trả lời & Explanation
@@ -129,35 +142,81 @@ Khi lưu vào CSV column `answer_X`, option tách nhau bằng `\n`.
 
 **Bắt buộc ≥ 2 distractor dạng 1 hoặc 2** (role reversal / single-side) cho Q2 compare.
 
-### R6.3 Explanation format (3 phần BẮT BUỘC)
+### R6.3 Explanation format — 3 phần BẮT BUỘC (VN + EN)
 
-Mỗi câu hỏi có 2 cột: `explain_vn_X` (tiếng Việt) và `explain_en_X` (tiếng Anh). Mỗi explain **3 phần** rõ ràng:
+> **Explanation không chỉ "có nội dung" — nó phải CHỨNG MINH câu hỏi + đáp án đúng có logic.**
+> Đọc hiểu tổng hợp = 2 đoạn A + B (hoặc 3 sections advice). Explanation PHẢI **trích dẫn rõ ràng từ A và từ B** (đặc biệt với Q2 compare), nêu thứ tự chủ thể để loại trừ distractor đảo vai.
 
-#### Phần 1 — Đáp án đúng
-- Đáp án số mấy
-- Trích dẫn **câu trong A và B** (cả 2 cho Q2 compare)
-- Paraphrase lại ý đáp án nói gì
+#### Phần 1 — Đáp án đúng (BẮT BUỘC trích cả A và B cho Q2)
+- Nêu rõ "Đáp án đúng: (X)" + nội dung paraphrase
+- **Trích dẫn từ A** (vd: "Trong A, tác giả viết: `「...」`")
+- **Trích dẫn từ B** (vd: "Trong B, tác giả viết: `「...」`") — BẮT BUỘC cho Q2 compare
+- Cho Q1 focus 1 đoạn: chỉ cần trích đoạn tương ứng + nêu rõ đoạn nào (A hay B)
+- Cho Q2 compare: phải so 2 trích dẫn → kết luận điểm chung / điểm khác / cách tích hợp
 
-#### Phần 2 — Đáp án sai + bẫy
-- Từng đáp án sai (3 options còn lại), nêu rõ:
-  - Bẫy gì (Role reversal / Single-side / Mix / Scope / Extreme / Extraneous)
-  - Vì sao sai (trích dẫn cụ thể A hoặc B phản bác)
+#### Phần 2 — Đáp án sai (TỪNG đáp án + loại bẫy đặc thù tổng hợp)
+- Đi qua **TẤT CẢ 3 đáp án sai** (1 đáp án 1 dòng), không bỏ sót
+- Mỗi đáp án sai phải nêu:
+  1. **Loại bẫy** (Role reversal A/B / Single-side / Mix A+B / Scope / Extreme / Extraneous)
+  2. **Trích cụ thể** từ A hoặc B chứng minh sai (vd: "A thực ra nói X, không phải Y như đáp án")
+- **Role reversal** đặc thù dạng này: phải nêu rõ "Đáp án nói A → X, B → Y nhưng thực ra A → Y, B → X" (đảo thứ tự chủ thể)
+- **Single-side**: phải nêu rõ "Chỉ khớp A (hoặc B) nhưng đáp án presented như cả 2"
+- **Extraneous**: phải nêu rõ "Cả A và B đều không nói ý này"
+- KHÔNG dùng câu chung chung — phải chỉ rõ A hay B, ý nào trong đoạn đủ để bác bỏ
 
 #### Phần 3 — Tóm tắt chiến lược
-- 1-2 câu tổng kết: "Phải đọc kỹ cả A và B, đặc biệt là [X]..." / "Cẩn thận distractor đảo vai A/B..."
+- 1-2 câu: chiến lược giải Q1/Q2 (vd: "Q2 compare → đọc kỹ thesis A và thesis B, kiểm tra thứ tự chủ thể trong đáp án để loại role reversal")
 
-### R6.4 Ví dụ explain VN cho Q2 compare
+### R6.4 Ví dụ explain VN cho Q2 compare — BÀI N1 mẫu
 
+**Bài N1** (giả tưởng — topic AI và sáng tạo):
+- **A**: AI là công cụ hỗ trợ, không thể thay thế sáng tạo con người vì AI không có "động cơ ý thức". Cuối A: 「AIはあくまで道具にすぎず、人間の創造性を代替するものではない」.
+- **B**: AI có thể tạo ý tưởng mới qua kết hợp dữ liệu, nhưng cần con người đánh giá để chọn ý tưởng có giá trị. Cuối B: 「AIは新しい着想を生み出すが、それを意味あるものに育てるのは人間である」.
+
+**Question 2** (Q2 compare):
+> AとBのAIに対する考え方について、最も適切なものはどれか。
+
+**Answers** (4 options, no prefix):
 ```
-Đáp án đúng: 2. A nói "AI là công cụ hỗ trợ chứ không thể thay thế sáng tạo con người", B nói "AI có thể tạo ra ý tưởng mới nhưng cần con người đánh giá". Cả 2 đều xem AI như công cụ hỗ trợ — thesis chung.
-
-Đáp án sai:
-- 1. Role reversal — đảo vai: nói A quan tâm tốc độ, B quan tâm chất lượng, nhưng thực ra A nói về "giới hạn AI" và B nói về "tiềm năng AI".
-- 3. Single-side — chỉ khớp B ("AI tạo ý tưởng mới") nhưng A không nói ý này.
-- 4. Extreme — dùng từ "AI phải bị cấm hoàn toàn" — cả A và B đều không phủ nhận AI.
-
-→ Chiến lược: Q2 compare → kiểm tra cả đoạn A và đoạn B. Loại distractor đảo vai bằng cách đọc lại thứ tự chủ thể trong đáp án, so với thứ tự trong bài.
+AはAIの速度を重視し、Bは品質を重視している
+AもBもAIを人間の創造性を支える道具として位置づけている
+AはAIが新しい着想を生み出すと述べ、Bはそれを否定している
+AもBもAIを完全に否定し、人間だけで創造すべきだと主張している
 ```
+
+**correct_answer**: 2
+
+**explain_vn**:
+```
+ĐÁP ÁN ĐÚNG (2): AもBもAIを人間の創造性を支える道具として位置づけている (Cả A và B đều xác định AI là công cụ hỗ trợ sáng tạo của con người).
+Trong A, tác giả viết: 「AIはあくまで道具にすぎず、人間の創造性を代替するものではない」 (AI suy cho cùng chỉ là công cụ, không thể thay thế sáng tạo con người).
+Trong B, tác giả viết: 「AIは新しい着想を生み出すが、それを意味あるものに育てるのは人間である」 (AI tạo ý tưởng mới, nhưng nuôi nó thành thứ có ý nghĩa là việc của con người).
+Tích hợp: Dù góc nhìn khác (A nhấn "công cụ thuần", B nhấn "AI có ý tưởng nhưng cần người đánh giá"), CẢ HAI đều xem AI như công cụ hỗ trợ con người — thesis chung của 2 đoạn.
+
+ĐÁP ÁN SAI:
+(1) AはAIの速度を重視し、Bは品質を重視している — Role reversal A/B: Bài KHÔNG nói A quan tâm tốc độ hay B quan tâm chất lượng. Thực tế A bàn về "giới hạn của AI" còn B bàn về "tiềm năng của AI" — đảo vai chủ đề.
+(3) AはAIが新しい着想を生み出すと述べ、Bはそれを否定している — Role reversal: ĐẢO NGƯỢC. Thực ra B mới là người nói AI tạo ý tưởng mới (「新しい着想を生み出す」), A nói AI không thay thế sáng tạo con người. Đáp án gán đảo phát ngôn của A và B.
+(4) AもBもAIを完全に否定し... — Extreme/Extraneous: Cả A và B đều KHÔNG phủ nhận AI hoàn toàn. A nói AI "あくまで道具" (vẫn là công cụ), B đề cao AI tạo ý tưởng. Đáp án dùng từ extreme "完全に否定" sai trầm trọng.
+
+Tóm tắt: Q2 compare → đọc kỹ thesis cuối A và thesis cuối B, kiểm tra THỨ TỰ chủ thể trong đáp án so với bài để loại role reversal (1, 3). Loại đáp án dùng từ extreme (4) — cả A và B đều có quan điểm trung dung.
+```
+
+**explain_en**:
+```
+CORRECT ANSWER (2): AもBもAIを人間の創造性を支える道具として位置づけている (Both A and B position AI as a tool supporting human creativity).
+In A, the author writes: 「AIはあくまで道具にすぎず、人間の創造性を代替するものではない」 (AI is ultimately just a tool, not a replacement for human creativity).
+In B, the author writes: 「AIは新しい着想を生み出すが、それを意味あるものに育てるのは人間である」 (AI generates new ideas, but humans cultivate them into something meaningful).
+Integration: Despite different angles (A emphasizes "pure tool," B emphasizes "AI generates but needs human judgment"), BOTH view AI as a tool supporting humans — the shared thesis.
+
+WRONG ANSWERS:
+(1) AはAIの速度を重視し、Bは品質を重視している — Role reversal A/B: Article does NOT discuss A on speed or B on quality. A actually discusses AI's "limits" while B discusses AI's "potential" — fabricated topic reversal.
+(3) AはAIが新しい着想を生み出すと述べ、Bはそれを否定している — Role reversal: REVERSED. B is the one stating AI generates new ideas (「新しい着想を生み出す」); A states AI doesn't replace human creativity. Option swaps A's and B's claims.
+(4) AもBもAIを完全に否定し... — Extreme/Extraneous: Neither A nor B fully rejects AI. A says AI is "still a tool" while B emphasizes AI's idea generation. The extreme word "完全に否定" is severely incorrect.
+
+Summary: For Q2 compare → read A's closing thesis and B's closing thesis carefully, check SUBJECT ORDER in options vs article to eliminate role reversal (1, 3). Eliminate extreme-word options (4) — both A and B hold moderate views.
+```
+
+**Explanation phải bằng cả 2 ngôn ngữ (VN + EN)** với cùng nội dung logic — không phải dịch máy.
 
 ### R6.5 Câu hỏi Nhật phổ biến (form chuẩn JLPT đọc hiểu tổng hợp)
 
