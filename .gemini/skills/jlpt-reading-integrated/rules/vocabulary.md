@@ -48,6 +48,26 @@ Nếu bài N2 dùng quá nhiều kanji N1 → **viết lại bằng từ N2**, k
 
 ## R4. Furigana — Quy tắc & Kanji lookup
 
+### R4.0 ⛔ Ruby phải có `<rt>` không rỗng — ZERO TOLERANCE
+
+Mỗi `<ruby>...</ruby>` BẮT BUỘC phải có `<rt>` chứa furigana **không rỗng**. Nếu thiếu hoặc rỗng, browser KHÔNG render được furigana → bài SAI chuẩn JLPT.
+
+**❌ SAI (browser không hiển thị furigana — cùng vẻ ngoài như chưa có furigana):**
+- `<ruby>未曾有</ruby>` — thiếu `<rt>` hoàn toàn
+- `<ruby>未曾有<rt></rt></ruby>` — `<rt>` rỗng
+- `<ruby>未曾有<rt>  </rt></ruby>` — `<rt>` chỉ whitespace
+
+**✅ ĐÚNG:**
+- `<ruby>未曾有<rt>みぞう</rt></ruby>` (từ N1 vượt level)
+- `<ruby>享受<rt>きょうじゅ</rt></ruby>` (compound word)
+- `<ruby>構築<rt>こうちく</rt></ruby>`
+
+Pipeline auto-detect: `process_html.py --validate --html-dir <dir> --csv sheets/samples_v1.csv` quét **CẢ HTML lẫn CSV** (cột `text_read`). Sẽ FAIL nếu phát hiện ruby thiếu `<rt>` hoặc `<rt>` rỗng. Phải fix ngay trước khi QC qua. Khi gen, agent PHẢI điền furigana hiragana vào `<rt>` mỗi lần dùng `<ruby>`.
+
+> **🚨 LƯU Ý CỰC KỲ QUAN TRỌNG: `<ruby>` BẮT BUỘC ĐI KÈM `<rt>` KHÔNG RỖNG**
+> Nếu sửa ruby trong HTML đã gen mà QUÊN chạy `--refresh` thì cột `text_read` trong CSV vẫn giữ ruby hỏng cũ → data huấn luyện AI **BỊ HỎNG**.
+> Workflow đúng: **sửa HTML → `--refresh` → `--validate --csv` để verify cả HTML và CSV đều không còn broken ruby**.
+
 ### R4.1 Compound Word Rule — CẤM dạng "Ab"
 
 **LUÔN viết nguyên bộ kanji** rồi đặt furigana bao toàn bộ. **TUYỆT ĐỐI KHÔNG** tách nửa kanji nửa hiragana.
