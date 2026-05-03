@@ -83,7 +83,7 @@ Chỉ chọn 1 trong 2:
 
 ### R4.2 Furigana Lookup Procedure
 
-Bước 1: **Xác định level kanji** bằng `rules/jlpt_kanji.csv` (2150 kanji).
+Bước 1: **Xác định level kanji** bằng `rules/kanji_simplified.csv` (2150 kanji).
 
 Bước 2: **Nếu kanji > level bài** → thêm furigana:
 

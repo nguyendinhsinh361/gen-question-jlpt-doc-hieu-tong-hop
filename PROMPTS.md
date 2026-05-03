@@ -51,7 +51,7 @@ Làm đúng theo SKILL.md — từng bài một, đọc rules/ trước khi gen.
 - **Role reversal A/B** (đặc trưng dạng này): A nói X, B nói Y → distractor "A nói Y, B nói X"
 - **Single-side**: chỉ khớp A hoặc chỉ khớp B, được presented như "cả 2"
 
-⛔ FURIGANA — chỉ cho từ VƯỢT level. Cấm dạng "Ab". Data thực tế cả N1 và N2 = 0% ruby — ưu tiên 0 ruby. Tra rules/jlpt_kanji.csv.
+⛔ FURIGANA — chỉ cho từ VƯỢT level. Cấm dạng "Ab". Data thực tế cả N1 và N2 = 0% ruby — ưu tiên 0 ruby. Tra rules/kanji_simplified.csv.
 
 ⛔ HTML rules: <p> thuần (KHÔNG <br> giữa câu), KHÔNG <table>. Container 780px, line-height 1.9.
 
@@ -77,7 +77,7 @@ Lưu CSV vào sheets/samples_v1.csv. HTML lưu vào assets/html/doc_hieu_tong_ho
 Trước khi gen:
 1. Đọc rules/rule_doc_hieu.md (rule giáo viên — source-of-truth cho vocab/grammar/distractor)
 2. Đọc rules/content.md + rules/vocabulary.md + rules/technical.md + rules/questions.md
-3. Đọc rules/jlpt_kanji.csv để tra level kanji
+3. Đọc rules/kanji_simplified.csv để tra level kanji
 4. Đọc 1-2 sample: scripts/load_references.py --level {LEVEL} --count 2
 5. Scan sheets/samples_v1.csv xem topic + relationship + Q combo nào đã dùng
 
