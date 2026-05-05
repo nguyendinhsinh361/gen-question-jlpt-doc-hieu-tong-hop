@@ -94,13 +94,14 @@ description: >
 
 ## BƯỚC 0: CHUẨN BỊ (1 lần cho batch)
 
-1. **Đọc `rules/rule_doc_hieu.md`** — **Bộ Tiêu Chí Đánh Giá Đọc Hiểu JLPT toàn diện** từ giáo viên (source-of-truth, 11 phần: 4 tiêu chí, 程度 ±, 書き下ろし/による, nhãn A/B, furigana per level, 8 loại câu hỏi, 6 loại bẫy, tiêu chí chi tiết per level).
+1. **Đọc `rules/rule_doc_hieu.md`** — **Bộ Tiêu Chí Đánh Giá Đọc Hiểu JLPT toàn diện** từ giáo viên (source-of-truth, 11 phần: 4 tiêu chí, 程度 ±, 書き下ろし/による, nhãn A/B, **文体の統一 (thể chia)**, furigana per level, 8 loại câu hỏi, 5 loại bẫy chuẩn (+ Single-side cho 統合理解), tiêu chí chi tiết per level).
    **Phần áp dụng trực tiếp cho dạng đọc hiểu tổng hợp (統合理解)** — CHỈ N1 và N2:
    - Phần 1 (Tổng quan & Nguyên tắc 程度) — biên ± per level; ~600字 tổng A+B (mỗi bài 250–360字)
    - Phần 2 (Hình thức) — nhãn A/B rõ ràng; **không ①② cho câu so sánh**; có gạch chân khi câu hỏi chi tiết về A hoặc B
+   - **Phần 2.4 (Thể chia nhất quán 文体の統一)** — N1/N2 dùng **普通形** (だ・である). Cả bài A và bài B + câu hỏi + 4 đáp án phải **thống nhất thể** — toàn bộ 普通形. (Văn phong A và B có thể khác nhau chút về sắc thái nhưng cùng level và cùng thể.)
    - Phần 3 (Furigana) — bảng quy tắc per level
    - Phần 4 (8 loại câu hỏi) — đặc biệt **`comprehensive_understanding`** (LABEL CỐ ĐỊNH cho cả 2 câu), 2 form chuẩn: 「AとBが共通して述べていることは何か」 + 「○○について、AとBはどのように述べているか」
-   - Phần 5 (6 loại bẫy đáp án) — đặc biệt **Single-side** (đặc trưng dạng này) + **Cross-swap** (gán ý A cho B / ngược lại)
+   - Phần 5 (5 loại bẫy chuẩn + **Single-side**) — đặc biệt **Single-side** (bẫy đặc trưng riêng cho 統合理解) + **Cross-swap** (gán ý A cho B / ngược lại)
    - **Phần 9.3 (N2 統合理解 ~600字, 2 câu)**, **Phần 10.4 (N1 統合理解 ~600字, 2 câu)** — tiêu chí chi tiết 4 chiều; A và B đối lập hoặc bổ sung
    - Phần 11 (Bảng so sánh tổng hợp) — tra cứu nhanh.
 2. **Đọc rules skill**: `rules/content.md` + `rules/vocabulary.md` + `rules/technical.md` + `rules/questions.md`
