@@ -129,18 +129,36 @@ Khi lưu vào CSV column `answer_X`, option tách nhau bằng `\n`.
 
 > **CHÚ Ý**: Data gốc JSON dùng `correctAnswer` 0-based. Khi convert sang CSV phải **+1** để thành 1-based.
 
-### R6.2 Distractor trap types (đặc thù đọc hiểu tổng hợp)
+### ⛔ Phân loại bẫy đáp án — 7 loại tổng (5 chuẩn + bẫy có điều kiện)
 
-Đọc hiểu tổng hợp yêu cầu distractor **đặc thù compare/integrate**. 6 trap type phải có:
+> **Nguồn**: rule_doc_hieu.md Phần 5 (5.1–5.7). Áp dụng cho dạng này: **N1 + N2**.
+>
+> **Quy tắc:** Trong 4 đáp án (1 đúng + 3 sai), 3 distractor PHẢI dùng **≥ 3 loại bẫy khác nhau** từ bảng dưới. Mỗi distractor phải dùng info/ý THẬT từ bài (trừ Fabrication có thể bịa cận-context).
 
-1. **Role reversal (đảo vai A/B)** — đặc trưng của dạng này: A nói X, B nói Y → distractor: "A nói Y, B nói X"
-2. **Single-side only** — chỉ khớp A hoặc chỉ khớp B, nhưng được presented như "cả 2"
-3. **Mix A+B** — trộn 1 câu nửa đúng A / nửa đúng B
-4. **Scope** — quá rộng ("AもBも絶対反対") hoặc quá hẹp so với ý thật
-5. **Extreme nuance** — thêm từ extreme (必ず, 絶対, すべて, 全く) → trái ý 1 hoặc cả 2 tác giả
-6. **Extraneous fact** — thêm ý ngoài bài (cả A và B đều không nói)
+| Loại bẫy | Mô tả | Ví dụ |
+|----------|-------|-------|
+| **① Reversal** ❌ | Đảo ngược ý nghĩa, kết luận, quan hệ nhân-quả từ bài | Bài: 「Aによって元気になった」 → Bẫy: 「Aの後で体が重くなった」 (đảo ngược) |
+| **② Detail Swap** 🔄 | Dùng thông tin đúng nhưng gán sai ngữ cảnh (sai đối tượng/thời điểm/địa điểm) | Bài: 「Aは嵐山, Bは金閣寺」 → Bẫy: 「Aは金閣寺」 (đúng chi tiết, sai ngữ cảnh) |
+| **③ Fabrication** 🎭 | Thêm thông tin hoàn toàn KHÔNG CÓ trong bài | Bài không nói X → Bẫy: 「XだからY」 — không kiểm chứng được |
+| **④ Scope** 📐 | Đáp án quá RỘNG (over-generalization) hoặc quá HẸP so với ý bài | Bài: 「金閣寺で写真」 → Bẫy rộng: 「京都で写真」 / Bẫy hẹp: 「池のそばで写真」 |
+| **⑤ Mixing** 🧩 | Kết hợp 2 thông tin đúng riêng lẻ thành ý sai (không tồn tại trong bài) | A đúng + B đúng nhưng không liên quan → Bẫy: 「AだからB」 |
+| **⑥ Single-side** ➕ | Đáp án chỉ khớp với A hoặc chỉ với B nhưng được presented như "cả 2" — bẫy ĐẶC TRƯNG cho 統合理解 | Câu hỏi điểm chung A&B; Bẫy: ý kiến chỉ có trong A, không có trong B (hoặc ngược lại) |
+| **⑥b Cross-swap (Role reversal A/B)** 🔀 | Hoán đổi vai trò A và B — A nói X, B nói Y → distractor "A nói Y, B nói X" | Khi câu hỏi compare A vs B, đảo thứ tự chủ thể trong distractor là bẫy chính của Q2 |
+| **⑦ Peripheral Source** 📎 | Đáp án lấy từ 注/source line thay vì lập luận của A hay B | Hiếm hơn ở 統合 (vì bài ngắn, 注 ít) nhưng có thể xuất hiện ở N1 |
 
-**Bắt buộc ≥ 2 distractor dạng 1 hoặc 2** (role reversal / single-side) cho Q2 compare.
+**📊 Phân bổ thực tế per level (từ data đề thi):**
+- **N5–N4**: Reversal (cảm xúc/hành động) + Detail Swap đơn giản + Fabrication thông tin ngoài bài
+- **N3**: Detail Swap (hoán đổi nhân vật/thời điểm) + Mixing (trộn lý do) + Fabrication tinh tế hơn
+- **N2**: Scope (quá rộng/hẹp) + Reversal logic (concede trap: ý nhượng bộ vs ý chính) + Mixing (evidence + opinion)
+- **N1**: Peripheral Source (nếu 注 dài) + Reversal sâu (premise vs conclusion) + Scope cực tinh tế (1 từ điều kiện) + Mixing phức tạp (2+ bước lập luận)
+
+> **Áp dụng:** 5 loại chuẩn áp dụng cho cả N1 và N2. Single-side + Cross-swap ĐẶC BIỆT phổ biến cho Q2 (compare). Peripheral Source hiếm.
+
+> **🔍 Single-side & Cross-swap — bẫy ĐẶC TRƯNG dạng 統合理解**:
+> - **Single-side**: distractor đúng với A hoặc B (không phải cả 2) → câu hỏi điểm chung A&B sẽ rơi vào bẫy này
+> - **Cross-swap (Role reversal)**: đảo thứ tự "A nói X, B nói Y" → "A nói Y, B nói X". Đặc biệt cho Q2 compare.
+> - Q2 BẮT BUỘC ≥ 2 distractor là Single-side hoặc Cross-swap.
+
 
 ### R6.3 Explanation format — 3 phần BẮT BUỘC (VN + EN)
 
